@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai4Ai - Find the Perfect AI Tool</title>
+    <link rel="stylesheet" href="deepkseek.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="background">
+        <div class="bg-circle" style="top: 10%; left: 5%;"></div>
+        <div class="bg-circle" style="top: 80%; left: 85%;"></div>
+        <div class="bg-circle" style="top: 40%; left: 90%;"></div>
+        <div class="bg-circle" style="top: 60%; left: 10%;"></div>
+        <div class="bg-square" style="top: 20%; left: 80%;"></div>
+        <div class="bg-square" style="top: 70%; left: 15%;"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Ai4Ai</h1>
+            <nav class="nav">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#" class="nav-link">Categories</a>
+                <a href="#" class="nav-link">Trending</a>
+                <a href="#" class="nav-link">About</a>
+                <div class="free-badge">
+                    <i class="fas fa-bolt"></i>
+                    <span>100% Free API</span>
+                </div>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero">
+                <h2 class="hero-title">Find the Perfect AI Tool for Your Needs</h2>
+                <p class="hero-subtitle">Search through thousands of AI tools categorized by function, price, and popularity. <span class="free-highlight">100% FREE - No API credits needed!</span></p>
+                
+                <!-- Search Section -->
+                <div class="search-section" id="searchSection">
+                    <div class="search-container">
+                        <div class="search-header">
+                            <div class="search-engine-label">
+                                <i class="fas fa-robot"></i>
+                                <span id="engineLabel">Powered by Free AI APIs</span>
+                                <span class="api-status" id="apiStatus">
+                                    <i class="fas fa-circle"></i>
+                                    All Systems Active
+                                </span>
+                            </div>
+                            <div class="search-examples">
+                                <span class="example-tag">Try: "AI for video editing"</span>
+                                <span class="example-tag">"Free image generation tools"</span>
+                                <span class="example-tag">"AI presentation makers"</span>
+                            </div>
+                        </div>
+                        <form class="search-form" id="searchForm">
+                            <div class="search-input-group">
+                                <i class="fas fa-search search-icon"></i>
+                                <input type="text" id="searchInput" class="search-input" placeholder="Search for any AI tool (100% FREE)..." autocomplete="off">
+                                <button type="submit" class="search-button">
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </div>
+                            <div class="search-hints">
+                                <span class="hint">No API keys needed! Using free AI models from Hugging Face and Cohere</span>
+                            </div>
+                        </form>
+                        
+                        <!-- Quick Categories -->
+                        <div class="categories">
+                            <div class="category" data-category="image">
+                                <i class="fas fa-image"></i>
+                                <span>Image Generation</span>
+                            </div>
+                            <div class="category" data-category="video">
+                                <i class="fas fa-video"></i>
+                                <span>Video Creation</span>
+                            </div>
+                            <div class="category" data-category="text">
+                                <i class="fas fa-font"></i>
+                                <span>Text & Writing</span>
+                            </div>
+                            <div class="category" data-category="audio">
+                                <i class="fas fa-music"></i>
+                                <span>Audio & Music</span>
+                            </div>
+                            <div class="category" data-category="code">
+                                <i class="fas fa-code"></i>
+                                <span>Code Generation</span>
+                            </div>
+                            <div class="category" data-category="presentation">
+                                <i class="fas fa-presentation-screen"></i>
+                                <span>Presentations</span>
+                            </div>
+                        </div>
+                        
+                        <!-- API Selector -->
+                        <div class="api-selector">
+                            <div class="api-option active" data-api="huggingface">
+                                <i class="fab fa-hubspot"></i>
+                                <span>Hugging Face</span>
+                                <small>Recommended</small>
+                            </div>
+                            <div class="api-option" data-api="cohere">
+                                <i class="fas fa-brain"></i>
+                                <span>Cohere</span>
+                                <small>Alternative</small>
+                            </div>
+                            <div class="api-option" data-api="openrouter">
+                                <i class="fas fa-route"></i>
+                                <span>OpenRouter</span>
+                                <small>Multiple Models</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Results Section (Initially Hidden) -->
+                <div class="results-section" id="resultsSection">
+                    <!-- Results will be dynamically populated here -->
+                </div>
+                
+                <!-- Free API Info -->
+                <div class="free-info">
+                    <div class="info-box">
+                        <i class="fas fa-lock-open"></i>
+                        <h3>Completely Free AI Search</h3>
+                        <p>We use free-tier AI APIs so you never need to pay for credits. Searches Reddit, Quora, Twitter, and Product Hunt for the latest AI tools.</p>
+                    </div>
+                    <div class="info-box">
+                        <i class="fas fa-sync-alt"></i>
+                        <h3>Daily Updated Database</h3>
+                        <p>Our system scrapes social media and forums daily to bring you the most current AI tool recommendations.</p>
+                    </div>
+                    <div class="info-box">
+                        <i class="fas fa-filter"></i>
+                        <h3>Smart Filtering</h3>
+                        <p>Tools are categorized by price (Free, Premium, Freemium) and ranked by quality and popularity.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Ai4Ai</div>
+                <p class="footer-description">The ultimate AI tool discovery platform. Find the perfect AI solution for any task. <strong>100% Free Forever.</strong></p>
+                
+                <div class="footer-links">
+                    <a href="https://www.instagram.com/rooohittt69?igsh=bmJkOThlamxyMDNv&utm_source=qr" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://www.linkedin.com/in/rohitsharma69?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
+                    <a href="https://github.com/rooohittt69/" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+                
+                <div class="api-credits">
+                    <h4>Powered by Free AI APIs:</h4>
+                    <div class="api-logos">
+                        <div class="api-logo">
+                            <i class="fab fa-hubspot"></i>
+                            <span>Hugging Face</span>
+                        </div>
+                        <div class="api-logo">
+                            <i class="fas fa-brain"></i>
+                            <span>Cohere</span>
+                        </div>
+                        <div class="api-logo">
+                            <i class="fas fa-robot"></i>
+                            <span>OpenRouter</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2023 Ai4Ai. All rights reserved to Rohit.</p>
+                    <p>This platform uses free-tier AI APIs - no credits or payments required.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="loading-spinner">
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+            </div>
+            <p class="loading-text" id="loadingText">Searching for AI tools...</p>
+            <div class="loading-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="api-source">
+                <i class="fas fa-wifi"></i>
+                <span id="apiSource">Using Hugging Face AI</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Free API Instructions -->
+    <div class="instructions-modal" id="instructionsModal">
+        <div class="instructions-content">
+            <h3><i class="fas fa-gift"></i> Free AI Search Activated!</h3>
+            <p>Your search is powered by free AI APIs. No credits or payments needed!</p>
+            <div class="instruction-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <p>Enter any AI tool search query</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <p>Our AI searches Reddit, Quora, Twitter for latest tools</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <p>Get categorized results (Free, Premium, Freemium)</p>
+                </div>
+            </div>
+            <button class="btn-start" id="startSearching">
+                <i class="fas fa-rocket"></i>
+                Start Searching Now
+            </button>
+        </div>
+    </div>
+    <script src="deepseek.js"></script>
+</body>
+</html>
