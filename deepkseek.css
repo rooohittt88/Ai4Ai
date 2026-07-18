@@ -1461,3 +1461,115 @@ body {
         font-size: 1.5rem;
     }
 }
+/* -------- UI Enhancement -------- */
+
+body{
+    scroll-behavior:smooth;
+}
+
+.hero{
+    padding:40px 0;
+}
+
+.hero-title{
+    font-size:3.3rem;
+    line-height:1.15;
+    letter-spacing:-1px;
+}
+
+.gradient-text{
+    background:linear-gradient(90deg,#4f46e5,#06b6d4);
+    
+    color:transparent;
+}
+
+.hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:8px 16px;
+    border-radius:999px;
+    background:rgba(79,70,229,.15);
+    color:#7c5cff;
+    margin-bottom:18px;
+    font-size:.9rem;
+    font-weight:600;
+}
+
+.hero-subtitle{
+    max-width:760px;
+    margin:auto;
+    line-height:1.8;
+    opacity:.9;
+}
+
+.search-container{
+    border-radius:22px;
+    backdrop-filter:blur(15px);
+    box-shadow:0 15px 35px rgba(0,0,0,.18);
+    transition:.3s;
+}
+
+.search-container:hover{
+    transform:translateY(-3px);
+}
+
+.search-input{
+    border-radius:50px;
+}
+
+.search-button{
+    border-radius:50px;
+    transition:.3s;
+}
+
+.search-button:hover{
+    transform:scale(1.05);
+}
+
+.category{
+    transition:.3s;
+}
+
+.category:hover{
+    transform:translateY(-6px);
+}
+
+.info-box{
+    border-radius:18px;
+    transition:.3s;
+}
+
+.info-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 40px rgba(0,0,0,.18);
+}
+
+.result-card{
+    border-radius:18px;
+    transition:.3s;
+}
+
+.result-card:hover{
+    transform:translateY(-8px);
+}
+
+.social-link{
+    transition:.3s;
+}
+
+.social-link:hover{
+    transform:translateY(-3px);
+}
+
+.theme-toggle{
+    transition:.3s;
+}
+
+.theme-toggle:hover{
+    transform:rotate(20deg);
+}
+
+.footer{
+    margin-top:80px;
+}
